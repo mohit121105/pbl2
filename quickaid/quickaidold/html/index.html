@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickAid - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Our Services</h2>
+        <div class="category-container">
+            <a href="doctor.html" class="category-item">👨‍⚕️ Doctor</a>
+            <a href="police.html" class="category-item">👮 Police</a>
+            <a href="firefighter.html" class="category-item">🚒 Fire Fighter</a>
+            <a href="pharmacy.html" class="category-item">💊 Pharmacy</a>
+        </div>
+    </section>
+
+    <!-- Recommended Section -->
+    <section class="recommended">
+        <h2>Recommended For You</h2>
+        <div class="recommended-container">
+            <div class="recommended-item">🏥 Book a Doctor Appointment</div>
+            <div class="recommended-item">🚑 Call an Emergency Ambulance</div>
+            <div class="recommended-item">💊 Order Medicines Online</div>
+        </div>
+    </section>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+    <a href="#" class="nav-item active">
+        <img src="assets/home.png" alt="Home Icon"> 
+        <span>Home</span>
+    </a>
+    <a href="services.html" class="nav-item">
+        <img src="assets/search.png" alt="Services Icon"> 
+        <span><Search></Search>Search</span>
+    </a>
+    <a href="appointments.html" class="nav-item">
+        <img src="assets/appoin.png" alt="Appointments Icon"> 
+        <span>Appointments</span>
+    </a>
+    <a href="#" class="nav-item" id="account-link">
+        <img src="assets/profle.png" alt="Profile Icon"> 
+        <span id="account-text">Account</span>
+    </a>
+    
+    </nav>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 QuickAid. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to Fetch User's Location
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    document.getElementById("user-location").innerText = `📍 Lat: ${lat}, Lon: ${lon}`;
+                },
+                () => {
+                    document.getElementById("user-location").innerText = "📍 Location access denied";
+                }
+            );
+        } else {
+            document.getElementById("user-location").innerText = "📍 Location not supported";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Dashboard - QuickAid</title>
+  <link rel="stylesheet" href="doctor-style.css" />
+  <script defer src="doctor-script.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <section class="user-info">
+    <img id="profile-pic" src="/assest/profle.png" alt="Doctor Profile Picture" class="profile-pic" />
+    <div class="user-details">
+      <div id="auth-buttons">
+        <a href="doctor-login.html" class="btn">Login</a>
+        <a href="doctor-signup.html" class="btn">Sign Up</a>
+      </div>
+      <div id="doctor-info" style="display: none;">
+        <h2 id="doctor-name"></h2>
+        <p id="doctor-specialty"></p>
+        <a href="doctor-profile.html" class="btn">Profile</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard Actions -->
+  <section class="dashboard">
+    <h2>Dashboard</h2>
+    <div class="dashboard-container">
+      <a href="appointments.html" class="dashboard-item">📅 Today's Appointments</a>
+      <a href="patients.html" class="dashboard-item">🧾 Patient Records</a>
+      <a href="availability.html" class="dashboard-item">🕒 Update Availability</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 QuickAid Doctor Portal</p>
+  </footer>
+
+</body>
+</html>
